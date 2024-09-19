@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تميم ❤️ لانا</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;700&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* خلفية متحركة للنجوم */
+        body:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(to bottom, #ff4d6d, #ffccd5);
+            background-size: cover;
+            z-index: -1;
+            animation: starsMove 100s linear infinite;
+        }
+
+        @keyframes starsMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 1000px 1000px; }
+        }
+
+        /* القلب النابض ثلاثي الأبعاد */
+        .heart-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 180px;
+            background-color: #ff4d6d;
+            border-radius: 50% 50% 0 0;
+            animation: heartbeat 1.5s infinite;
+            box-shadow: 0 0 20px rgba(255, 77, 109, 0.7);
+        }
+
+        .heart-background:before,
+        .heart-background:after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 180px;
+            background-color: #ff4d6d;
+            border-radius: 50%;
+        }
+
+        .heart-background:before {
+            top: -100px;
+            left: 0;
+        }
+
+        .heart-background:after {
+            left: 100px;
+            top: 0;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+        }
+
+        /* تأثيرات النصوص */
+        h1 {
+            font-size: 3em;
+            margin-top: 150px;
+            animation: fadeInUp 2s ease-out forwards;
+            color: #ffe3e3;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+            background: rgba(0, 0, 0, 0.5); /* خلفية شفافة */
+            padding: 10px;
+            border-radius: 15px;
+        }
+
+        .names {
+            font-size: 4em;
+            margin-top: 20px;
+            animation: pulseText 3s infinite;
+            color: #fff;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.5); /* خلفية شفافة */
+            padding: 10px;
+            border-radius: 15px;
+        }
+
+        .poem {
+            font-size: 1.5em;
+            margin-top: 30px;
+            animation: fadeInUp 3s ease-out forwards;
+            color: #ffebf0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            background: rgba(0, 0, 0, 0.5); /* خلفية شفافة */
+            padding: 10px;
+            border-radius: 15px;
+        }
+
+        /* تأثيرات أخرى للنصوص */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulseText {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+                color: #ffebf0;
+            }
+        }
+
+        /* الفوتر */
+        footer {
+            margin-top: 100px;
+            font-size: 1.2em;
+            color: #b56576;
+            text-shadow: 0 0 10px rgba(255,255,255,0.8);
+        }
+
+        /* تقسيم الصفحة */
+        section {
+            padding: 100px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        section:nth-of-type(odd) {
+            background-color: rgba(255, 204, 213, 0.8);
+        }
+
+        section:nth-of-type(even) {
+            background-color: rgba(255, 77, 109, 0.8);
+        }
+
+        /* حركة عند التمرير */
+        section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        section.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* حركة النصوص المتنقلة */
+        .moving-text {
+            font-size: 2em;
+            color: #ffebf0;
+            position: relative;
+            animation: slideIn 10s infinite;
+            background: rgba(0, 0, 0, 0.5); /* خلفية شفافة */
+            padding: 10px;
+            border-radius: 15px;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- القلب النابض ثلاثي الأبعاد -->
+    <div class="heart-background"></div>
+
+    <!-- الواجهة الأولى -->
+    <section class="in-view">
+        <h1>أهلاً بكِ في عالمي</h1>
+        <div class="names">تميم ❤️ لانا</div>
+        <div class="poem">يا حبيبتي لانا، أنتِ قلبي ونبضي وأغلى ما أملك.</div>
+    </section>
+
+    <!-- الواجهة الثانية -->
+    <section>
+        <h1>أحبكِ إلى الأبد</h1>
+        <div class="names">تميم ❤️ لانا</div>
+        <div class="poem">يا أجمل قصيدة غزل، كل نبضة من قلبي تهتف باسمكِ.</div>
+    </section>
+
+    <!-- الواجهة الثالثة مع نص متحرك -->
+    <section>
+        <div class="moving-text">يا حبيبتي لانا، سأكتب اسمكِ على نجوم السماء.</div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        تصميم بإحساس من تميم إلى لانا ❤️
+    </footer>
+
+    <script>
+        // وظيفة للتحقق من الأقسام التي يتم مشاهدتها وتمريرها لإضافة الحركات
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const triggerHeight = window.innerHeight / 5 * 4;
+
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+
+                if(sectionTop < triggerHeight) {
+                    section.classList.add('in-view');
+                } else {
+                    section.classList.remove('in-view');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
